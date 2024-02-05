@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <div class="container-xl">
@@ -39,7 +39,6 @@
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -51,8 +50,26 @@
                     success: function(response) {
                         // Update task list
                         $('#taskList').load('get_tasks.php');
+                        console.log(response);
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            });
+            $('.delete-task-btn').click(function() {
+                var taskId = $(this).data('task-id');
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'delete_task.php',
+                    data: { task_id: taskId },
+                    success: function(response) {
                         // Show success message or handle as needed
                         console.log(response);
+
+                        // Reload the page after successful deletion
+                        location.reload();
                     },
                     error: function(error) {
                         // Handle errors

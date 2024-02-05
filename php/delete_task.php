@@ -2,7 +2,6 @@
 include 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Check if the task_id is set
     if (isset($_POST['task_id'])) {
         $taskId = $_POST['task_id'];
 
