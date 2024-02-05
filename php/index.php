@@ -21,10 +21,12 @@
 
                 <label for="task_due_date">Post it color: </label>
                 <div class="radio-container">
+                    <input type="radio" id="javascript" name="col" value="yellow">
+                    <label for="col">Yellow</label>
                     <input type="radio" id="html" name="col" value="red">
-                    <label for="html">Red</label><br>
+                    <label for="col">Red</label><br>
                     <input type="radio" id="css" name="col" value="blue">
-                    <label for="css">Blue</label><br>
+                    <label for="col">Blue</label><br>
                     <input type="radio" id="javascript" name="col" value="green">
                     <label for="javascript">Green</label>
                 </div>
