@@ -2,7 +2,7 @@
 ## Practice project for php
 
 ### Technologies used:
-PHP, XAMPP, Apache, MySQL and phpMyadmin
+PHP, XAMPP, Apache, AJAX, jQuery, MySQL and phpMyadmin
 
 ### Functionalities:
 - Add a task (name, description, color)
